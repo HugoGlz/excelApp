@@ -1,0 +1,25 @@
+{
+  "name": "excel_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "NODE_PATH=. browserify -t [ babelify --presets [ es2015 ] ] src/js/index.js > public/js/app.js" ,
+    "start": "npm run build-js && npm run serve",
+    "serve": "serve ./public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoGlz/excelApp.git"
+  },
+  "author": "Hugo Gonzalez <hugo.java21@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HugoGlz/excelApp/issues"
+  },
+  "homepage": "https://github.com/HugoGlz/excelApp#readme",
+  "devDependencies": {
+    "serve": "^1.4.0"
+  }
+}
